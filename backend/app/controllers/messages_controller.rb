@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class MessagesController < ApplicationController
-  before_action :authenticate_user!, only:["index"]
-  
+  before_action :authenticate_user!, only: ['index']
+
   def index
     messages = Message.all
     messages_array = messages.map do |message|
