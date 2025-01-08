@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>アカウントを登録</h2>
-    <form>
+    <form @submit.prevent="signUp">
       <input type="text" required placeholder="名前" v-model="name" />
       <input
         type="email"
@@ -35,6 +35,17 @@ export default {
       password: '',
       passwordConfirmation: '',
     };
+  },
+  methods: {
+    async signUp() {
+      // eslint-disable-next-line no-console
+      console.log(
+        this.name,
+        this.email,
+        this.password,
+        this.passwordConfirmation,
+      );
+    },
   },
 };
 </script>
