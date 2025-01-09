@@ -9,6 +9,15 @@ module.exports = defineConfig({
       alias: {
         '@': path.resolve(__dirname, 'src'),
       },
+      fallback: {
+        http: false,
+        https: false,
+        url: false,
+        util: false,
+        stream: false,
+        zlib: false,
+        assert: false,
+      },
     },
   },
 });
